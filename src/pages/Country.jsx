@@ -59,7 +59,6 @@ export function Country() {
                     <p><span>Top Level Domain:</span> {country?.tld}</p>
                     <p className="curr"><span>Currencies:</span> {country?.currencies && Object.values(country?.currencies)[0].name}</p>
                     <div>
-                        {/*<p><span>Languages:</span> {Object.values(country.languages).map((lang, index) => <span className="lang" key={index}>{lang}, </span>)}</p>*/}
                         <p><span>Languages:</span> {country?.languages && Object.values(country.languages).join(", ")}</p><br/>
                     </div>
                 </div>

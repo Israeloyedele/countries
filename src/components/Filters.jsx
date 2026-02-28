@@ -15,7 +15,6 @@ export function Filters(props) {
                 placeholder="Search for a country..."/></div>
 
             <div className="filter">
-                {/*<label htmlFor="filter">Filter by Region</label>*/}
                 <select
 
                     name="filter"
