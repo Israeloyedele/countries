@@ -17,13 +17,14 @@ export function Card(props) {
             transition={{ duration: 0.3 }}
 
             className="card" onClick={() => navigate(`/${country?.name.common}`)}>
+            <a href={`/${country?.name.common}`} style={{ textDecoration: "none" }}>
             <img src={country?.flags.png} alt={`${country?.name.common}'s flag`} />
             <div className="card-content">
                 <h2>{country.name.common}</h2>
                 <p><span>Population:</span> {country.population.toLocaleString()}</p>
                 <p><span>Region:</span> {country.region}</p>
                 <p><span>Capital:</span> {country.capital.length ? country.capital[0] : "No Capital"}</p>
-            </div>
+            </div></a>
         </motion.li>
     )
 }
