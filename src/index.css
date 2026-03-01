@@ -146,11 +146,6 @@ option::checkmark{
   height: max-content;
   border-radius: 8px;
 }
-
-ul > p{
-    color: var(--text);
-    font-size: 1.2em;
-}
 ul{
   min-height: 60vh;
   height: auto;
@@ -212,12 +207,15 @@ span.lang{
     flex-direction: column;
     gap: 2em;
 }
-p.error{
+p.error, ul > p{
     color: var(--text);
     align-self: center;
     padding-top: 2em;
     font-size: 1.2em;
-    font-weight: 700;
+    font-weight: 600;
+}
+ul > p{
+    align-self: flex-start;
 }
 button.back-btn{
     margin-bottom: 20px;
