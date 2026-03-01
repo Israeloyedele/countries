@@ -171,7 +171,7 @@ li.card{
 
 }
 li.card:hover{
-  box-shadow: var(--bx) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--bx) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 li.card img{
   height: 50%;
@@ -242,6 +242,7 @@ button.back-btn, button.border{
 }
 .country-image img{
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 15px 0;
 }
 .country-details{
     display: flex;
