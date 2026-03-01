@@ -43,7 +43,10 @@ export function Country() {
             { loading ? <Loader />
                 : error ? <div className="country"><p className="error">Country Not Found.</p></div>
                 :
-                <div className="country-details">
+                <motion.div
+                    initial={{ opacity: 0, y: 100, scale: .5 }}
+                    animate={{ opacity: 1, y: 0, scale: 1, transition: { duration: 1, type: "spring" } }}
+                    className="country-details">
 
                 <div className="country-image"><img src={country?.flags.png} alt=""/></div>
 
@@ -76,7 +79,7 @@ export function Country() {
                     </div>
                 </div>
                 </div>
-            </div> }
+            </motion.div> }
             <Footer />
         </div>
         </>
