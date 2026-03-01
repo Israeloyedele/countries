@@ -172,6 +172,8 @@ li.card{
   text-overflow: ellipsis;
   box-shadow: var(--bx) 0 7px 29px 0;
   cursor: pointer;
+    background: var(--bg-element);
+
 }
 li.card:hover{
   box-shadow: var(--bx) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -187,8 +189,10 @@ li.card h2{
 }
 .card-content {
   padding: 2em;
+    background: var(--bg-element);
   color: var(--text);
   line-height: 25px;
+    border-radius: 0 0 8px 8px ;
 }
 .card-content span, .country-content span{
   font-weight: 700;
@@ -202,11 +206,18 @@ span.lang{
 }
 .country{
     padding: 1.5em;
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 2em;
+}
+p.error{
+    color: var(--text);
+    align-self: center;
+    padding-top: 2em;
+    font-size: 1.2em;
+    font-weight: 700;
 }
 button.back-btn{
     margin-bottom: 20px;
@@ -282,6 +293,7 @@ button.back-btn, button.border{
 .footer{
     color: var(--text);
     padding-bottom: 1em;
+    cursor: pointer;
 }
 .footer a{
     text-decoration: none;

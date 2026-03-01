@@ -1,7 +1,11 @@
+import { motion } from "framer-motion";
 export function Footer() {
     return (
-        <div className="footer">
-             <a href="https://israeloyedele.com">&copy; Israel Oyedele 2026</a>
-        </div>
+        <motion.div
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 }, y: -2 }}
+            whileTap={{ scale: 0.9, transition: { duration: 0.2 }}}
+            className="footer">
+             <a href="https://israeloyedele.com" target="_blank">&copy; Israel Oyedele 2026</a>
+        </motion.div>
     )
 }

@@ -13,6 +13,7 @@ export function Country() {
     const url = `https://restcountries.com/v3.1/name/${params.country}?fullText=true`;
     const [country, setCountry] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const navigate = useNavigate();
 
 
@@ -22,6 +23,7 @@ export function Country() {
     useEffect(() => {
         axios.get(url)
             .then(res => setCountry(res.data[0]))
+            .catch(() => setError(true))
             .finally(() => setLoading(false));
     }, [params.country, url]);
 
@@ -38,7 +40,9 @@ export function Country() {
                 <span>Back</span>
             </motion.button>
 
-            {loading? <Loader /> :
+            { loading ? <Loader />
+                : error ? <div className="country"><p className="error">Country Not Found.</p></div>
+                :
                 <div className="country-details">
 
                 <div className="country-image"><img src={country?.flags.png} alt=""/></div>
@@ -72,7 +76,7 @@ export function Country() {
                     </div>
                 </div>
                 </div>
-            </div>}
+            </div> }
             <Footer />
         </div>
         </>
