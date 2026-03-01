@@ -22,7 +22,7 @@ export function Card(props) {
                 <h2>{country.name.common}</h2>
                 <p><span>Population:</span> {country.population.toLocaleString()}</p>
                 <p><span>Region:</span> {country.region}</p>
-                <p><span>Capital:</span> {country.capital[0] || "No Capital"}</p>
+                <p><span>Capital:</span> {country.capital.length ? country.capital[0] : "No Capital"}</p>
             </div>
         </motion.li>
     )

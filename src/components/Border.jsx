@@ -17,7 +17,7 @@ export function Border(props) {
             .then(res => setCountry(res.data[0]))
             .finally(() => setLoading(false));
 
-    }, []);
+    }, [setLoading, url]);
 
 
     return (

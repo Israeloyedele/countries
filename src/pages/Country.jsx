@@ -25,7 +25,7 @@ export function Country() {
             .then(res => setCountry(res.data[0]))
             .catch(() => setError(true))
             .finally(() => setLoading(false));
-    }, [params.country, url]);
+    }, [params.country]);
 
     return (
         <>
