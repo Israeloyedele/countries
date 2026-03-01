@@ -63,7 +63,7 @@ export function Country() {
                     </div>
 
                 <div>
-                    <p><span>Top Level Domain:</span> {country?.tld}</p>
+                    <p><span>Top Level Domain:</span> {country?.tld.join(", ")}</p>
                     <p className="curr"><span>Currencies:</span> {country?.currencies && Object.values(country?.currencies)[0].name}</p>
                     <div>
                         <p><span>Languages:</span> {country?.languages && Object.values(country.languages).join(", ")}</p><br/>
